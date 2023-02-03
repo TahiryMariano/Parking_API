@@ -1,8 +1,8 @@
-const routes = require('express').Router();
+const router = require('express').Router();
+const CustomerRoutes = require('./CustomerRoutes')
+const RegularPassRoutes = require('./RegularPassRoutes')
 
+router.use('/customer', CustomerRoutes)
+router.use('/regular', RegularPassRoutes)
 
-routes.get('/', async (req, res, next) => {
-    res.send({ message: 'OK API is working' })
-});
-
-module.exports = routes;
+module.exports = router;

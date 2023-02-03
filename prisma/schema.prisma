@@ -30,6 +30,7 @@ model Parking_Slot_Reservation {
 
 model Customer {
   id                        Int                        @id @default(autoincrement())
+  name                      String                     @unique
   vehicle_number            String                     @unique
   contact_number            Int
   is_regular_customer       Boolean                    @default(false)
